@@ -5,7 +5,7 @@ Get-PackageProvider -Name NuGet -ForceBootstrap | Out-Null
 
 Install-Module -Name Psake, PSDeploy, BuildHelpers, PSScriptAnalyzer -Force
 Install-Module -Name Pester -Force -SkipPublisherCheck
-Install-Module -Name Posh-SSH -Force
+Install-Module -Name Posh-SSH -RequiredVersion "2.2" -Force
 Import-Module -Name Psake, BuildHelpers
 
 Set-BuildEnvironment

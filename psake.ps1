@@ -86,18 +86,18 @@ Task Build -Depends Test {
 
     Set-ModuleFunction -Name "$ENV:BHPSModulePath\$ENV:BHProjectName.psm1"
 
-    # # Module version bumped
-    # try {
+    # Module version bumped
+    try {
 
-    #     $Ver = Get-NextNugetPackageVersion -Name $ENV:BHProjectName -ErrorAction Stop
-    #     Update-Metadata -Path $ENV:BHPSModuleManifest -PropertyName ModuleVersion -Value $Ver -ErrorAction Stop
-    # }
-    # catch {
+        $Ver = Get-NextNugetPackageVersion -Name $ENV:BHProjectName -ErrorAction Stop
+        Update-Metadata -Path $ENV:BHPSModuleManifest -PropertyName ModuleVersion -Value $Ver -ErrorAction Stop
+    }
+    catch {
 
-    #     "Failed to update version for '$ENV:BHProjectName': $PSItem.`nContinuing with existing version" |
-    #     Write-Output
-    # }
-    # Write-Output -InputObject "`n"
+        "Failed to update version for '$ENV:BHProjectName': $PSItem.`nContinuing with existing version" |
+        Write-Output
+    }
+    Write-Output -InputObject "`n"
 }
 
 # Module deployment
