@@ -1,0 +1,14 @@
+PSTOPIC
+    about_AsgGroupSSh
+
+
+SHORT DESCRIPTION
+    AsgGroupSSh enhances the functionality provided by the well known PowerShell SSH module.
+
+
+LONG DESCRIPTION
+    AsgGroupSSh enhances the functionality provided by the well known community module 'PowerShell SSH' by DarkOperator.
+
+
+DETAILED DESCRIPTION
+    This module enhances the functionality provided by the well known community module 'PowerShell SSH' by DarkOperator, with advanced functions such as Invoke-BAShSudoCommand.
